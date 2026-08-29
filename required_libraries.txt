@@ -1,0 +1,24 @@
+Required Python Libraries
+
+Install these libraries before running the program:
+
+streamlit
+openpyxl
+pandas
+
+Installation command:
+
+pip install streamlit openpyxl pandas
+
+Run the program with:
+
+streamlit run mrf_automation_combined.py
+
+Note:
+The following are built-in Python libraries, so you do NOT need to install them separately:
+
+os
+re
+tempfile
+io
+zipfile
