@@ -1,0 +1,242 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\islam.munjurul> cd "C:\Users\islam.munjurul\Desktop\MRF-Automation"
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git init
+
+Initialized empty Git repository in C:/Users/islam.munjurul/Desktop/MRF-Automation/.git/
+
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git remote add origin git@github.com:sumon1978/MRF-Automation.git
+
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git commit -m "first commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mrf_automation_combined.py
+        required_libraries.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git branch -M main
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git remote add origin git@github.com:sumon1978/MRF-Automation.git
+error: remote origin already exists.
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:sumon1978/MRF-Automation.git'
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git remote add origin git@github.com:sumon1978/MRF-Automation.git
+error: remote origin already exists.
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> cd "C:\Users\islam.munjurul\Desktop\MRF-Automation"
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git init
+Reinitialized existing Git repository in C:/Users/islam.munjurul/Desktop/MRF-Automation/.git/
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mrf_automation_combined.py
+        required_libraries.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config set advice.addEmptyPathspec false"
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mrf_automation_combined.py
+        required_libraries.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git add .
+warning: in the working copy of 'mrf_automation_combined.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'required_libraries.txt', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   mrf_automation_combined.py
+        new file:   required_libraries.txt
+
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git commit -m "Initial commit - MRF Automation"
+[main (root-commit) de047ba] Initial commit - MRF Automation
+ Committer: Md Munjurul/TECH/Md Munjurul Islam (Email: islam.munjurul@robi.com.bd) <islam.munjurul@robi.com.bd>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 593 insertions(+)
+ create mode 100644 mrf_automation_combined.py
+ create mode 100644 required_libraries.txt
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git remote -v
+origin  git@github.com:sumon1978/MRF-Automation.git (fetch)
+origin  git@github.com:sumon1978/MRF-Automation.git (push)
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git push -u origin main
+The authenticity of host 'github.com (20.205.243.166)' can't be established.
+ED25519 key fingerprint is: SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git remote set-url origin https://github.com/sumon1978/MRF-Automation.git
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git remote -v
+origin  https://github.com/sumon1978/MRF-Automation.git (fetch)
+origin  https://github.com/sumon1978/MRF-Automation.git (push)
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 4.41 KiB | 1.10 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/sumon1978/MRF-Automation.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> cd C:\Users\islam.munjurul\Desktop\MRF-Automation
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> dir
+
+
+    Directory:
+    C:\Users\islam.munjurul\Desktop\MRF-Automation
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         8/29/2026  11:50 PM          15747 mrf_a
+                                                  utoma
+                                                  tion_
+                                                  combi
+                                                  ned.p
+                                                  y
+-a----         8/29/2026  11:54 PM            359 requi
+                                                  red_l
+                                                  ibrar
+                                                  ies.t
+                                                  xt
+
+
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> python --version
+Python 3.12.10
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> pip install -r required_libraries.txt
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+ERROR: Invalid requirement: 'Required Python Libraries': Expected end or semicolon (after name and no valid version specifier)
+    Required Python Libraries
+             ^ (from line 1 of required_libraries.txt)
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> py -m pip install -r required_libraries.txt
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+ERROR: Invalid requirement: 'Required Python Libraries': Expected end or semicolon (after name and no valid version specifier)
+    Required Python Libraries
+             ^ (from line 1 of required_libraries.txt)
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> type required_libraries.txt
+Required Python Libraries
+
+Install these libraries before running the program:
+
+streamlit
+openpyxl
+pandas
+
+Installation command:
+
+pip install streamlit openpyxl pandas
+
+Run the program with:
+
+streamlit run mrf_automation_combined.py
+
+Note:
+The following are built-in Python libraries, so you do NOT need to install them separately:
+
+os
+re
+tempfile
+io
+zipfile
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> py -m pip install streamlit openpyxl pandas
+Requirement already satisfied: streamlit in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (1.62.0)
+Requirement already satisfied: openpyxl in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (3.1.5)
+Requirement already satisfied: pandas in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (3.0.5)
+Requirement already satisfied: altair!=5.4.0,!=5.4.1,<7,>=5.0.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (6.2.2)
+Requirement already satisfied: blinker<2,>=1.5.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (1.9.0)
+Requirement already satisfied: click<9,>=7.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (8.5.0)
+Requirement already satisfied: numpy<3,>=1.23 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (2.5.2)
+Requirement already satisfied: packaging>=20 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (26.3)
+Requirement already satisfied: pillow<13,>=7.1.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (12.3.0)
+Requirement already satisfied: pydeck<1,>=0.8.0b4 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (0.9.3)
+Requirement already satisfied: protobuf<8,>=5.26.1 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (7.36.0)
+Requirement already satisfied: pyarrow!=25.0.0,<26,>=7.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (25.0.1)
+Requirement already satisfied: requests<3,>=2.27 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (2.34.2)
+Requirement already satisfied: toml<2,>=0.10.1 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (0.10.2)
+Requirement already satisfied: typing-extensions<5,>=4.10.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (4.16.0)
+Requirement already satisfied: starlette<2,>=0.46.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (1.6.0)
+Requirement already satisfied: uvicorn<1,>=0.30.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (0.52.4)
+Requirement already satisfied: httptools<1,>=0.6.3 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (0.8.0)
+Requirement already satisfied: anyio<5,>=4.0.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (4.14.2)
+Requirement already satisfied: python-multipart<1,>=0.0.10 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (0.0.32)
+Requirement already satisfied: websockets<17,>=12.0.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (16.1.1)
+Requirement already satisfied: itsdangerous<3,>=2.1.2 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (2.2.0)
+Requirement already satisfied: watchdog<7,>=2.1.5 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from streamlit) (6.0.0)
+Requirement already satisfied: et-xmlfile in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from openpyxl) (2.0.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: tzdata in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from pandas) (2026.3)
+Requirement already satisfied: jinja2 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit) (3.1.6)
+Requirement already satisfied: jsonschema>=3.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit) (4.26.0)
+Requirement already satisfied: narwhals>=2.4.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit) (2.25.0)
+Requirement already satisfied: idna>=2.8 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from anyio<5,>=4.0.0->streamlit) (3.19)
+Requirement already satisfied: six>=1.5 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.27->streamlit) (3.5.1)
+Requirement already satisfied: urllib3<3,>=1.26 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.27->streamlit) (2.7.0)
+Requirement already satisfied: certifi>=2023.5.7 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.27->streamlit) (2026.7.22)
+Requirement already satisfied: h11>=0.8 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from uvicorn<1,>=0.30.0->streamlit) (0.16.0)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from jinja2->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit) (3.0.3)
+Requirement already satisfied: attrs>=22.2.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit) (26.1.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit) (0.37.0)
+Requirement already satisfied: rpds-py>=0.25.0 in c:\users\islam.munjurul\appdata\local\programs\python\python312\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit) (2026.6.3)
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+PS C:\Users\islam.munjurul\Desktop\MRF-Automation> py -m streamlit run mrf_automation_combined.py
+2026-08-30 00:31:08.136 Uvicorn server started on :::8504
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8504
+  Network URL: http://192.168.0.102:8504
+
+  Help agents write better Streamlit apps?
+  Install the official Streamlit skills by running streamlit skills in your terminal.
+
+C:\Users\islam.munjurul\Desktop\MRF-Automation\mrf_automation_combined.py:111: Pandas4Warning: The copy keyword is deprecated and will be removed in a future version. Copy-on-Write is active in pandas since 3.0 which utilizes a lazy copy mechanism that defers copies until necessary. Use .copy() to make an eager copy if necessary.
+  df_rules = df_rules.infer_objects(copy=False)

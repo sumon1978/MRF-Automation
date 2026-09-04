@@ -1,0 +1,106 @@
+MRF Automation - Step by Step Command Notes
+
+STEP 1: Go to Project Folder
+
+cd "C:\Users\islam.munjurul\Desktop\MRF-Automation"
+
+
+STEP 2: Initialize Git
+
+git init
+
+
+STEP 3: Add GitHub Remote
+
+git remote add origin https://github.com/sumon1978/MRF-Automation.git
+
+If error: remote origin already exists
+
+Run:
+
+git remote set-url origin https://github.com/sumon1978/MRF-Automation.git
+
+
+STEP 4: Check Files
+
+dir
+
+Required files:
+- mrf_automation_combined.py
+- required_libraries.txt
+
+
+STEP 5: Add Files
+
+git add .
+
+
+STEP 6: Commit
+
+git commit -m "Initial commit - MRF Automation"
+
+
+STEP 7: Set Main Branch
+
+git branch -M main
+
+
+STEP 8: Push to GitHub
+
+git push -u origin main
+
+
+PYTHON SETUP
+
+
+STEP 9: Check Python
+
+python --version
+
+
+STEP 10: Install Libraries
+
+DO NOT use:
+pip install -r required_libraries.txt
+
+Use:
+
+py -m pip install streamlit openpyxl pandas
+
+
+STEP 11: Run Application
+
+py -m streamlit run mrf_automation_combined.py
+
+
+STEP 12: Open Browser
+
+http://localhost:8504
+
+or
+
+http://192.168.0.102:8504
+
+
+UPDATE WORKFLOW
+
+After changing code:
+
+git add .
+
+git commit -m "Update MRF Automation"
+
+git push
+
+
+Run again:
+
+py -m streamlit run mrf_automation_combined.py
+
+
+STATUS:
+GitHub connected
+Code pushed successfully
+Python installed
+Libraries installed
+Streamlit app running
