@@ -1,4 +1,56 @@
 
+1) প্রথমে আপনার project folder এ যান
+
+PowerShell খুলে লিখুন:
+
+cd C:\Users\islam.munjurul\Desktop\MRF-Automation
+
+Enter দিন।
+
+2) Git status দেখুন
+git status
+
+এখানে আপনার নতুন file দেখাবে।
+
+যেমন:
+
+Untracked files:
+  MRF_Automation_FINAL_CC_MOD_MRF_EDIT_FLOW_FIXED_V2.py
+3) File add করুন
+git add MRF_Automation_FINAL_CC_MOD_MRF_EDIT_FLOW_FIXED_V2.py
+
+অথবা সব পরিবর্তন add করতে:
+
+git add .
+4) Commit করুন
+git commit -m "Add MRF Automation FINAL V2"
+5) GitHub এ push করুন
+git push origin main
+6) Check করুন
+
+Push শেষ হলে:
+
+git status
+
+এমন দেখাবে:
+
+Your branch is up to date with 'origin/main'.
+nothing to commit, working tree clean
+
+যদি git push origin main দেওয়ার পরে login/error আসে, সেই error এখানে paste করুন।
+
+
+jodi nah thakay file folder a :
+
+
+
+git add .
+git commit -m "Add MRF Automation FINAL V2"
+git push origin main
+
+
+
+
 
 Step 1: GitHub Repository খুলুন
 
@@ -88,43 +140,3 @@ MRF_Automation_FINAL_CC_MOD_MRF_EDIT_FLOW_FIXED_V2.py
 .py সহ দিতে হবে।
 
 
-
-1) প্রথমে আপনার project folder এ যান
-
-PowerShell খুলে লিখুন:
-
-cd C:\Users\islam.munjurul\Desktop\MRF-Automation
-
-Enter দিন।
-
-2) Git status দেখুন
-git status
-
-এখানে আপনার নতুন file দেখাবে।
-
-যেমন:
-
-Untracked files:
-  MRF_Automation_FINAL_CC_MOD_MRF_EDIT_FLOW_FIXED_V2.py
-3) File add করুন
-git add MRF_Automation_FINAL_CC_MOD_MRF_EDIT_FLOW_FIXED_V2.py
-
-অথবা সব পরিবর্তন add করতে:
-
-git add .
-4) Commit করুন
-git commit -m "Add MRF Automation FINAL V2"
-5) GitHub এ push করুন
-git push origin main
-6) Check করুন
-
-Push শেষ হলে:
-
-git status
-
-এমন দেখাবে:
-
-Your branch is up to date with 'origin/main'.
-nothing to commit, working tree clean
-
-যদি git push origin main দেওয়ার পরে login/error আসে, সেই error এখানে paste করুন।
