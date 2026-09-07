@@ -48,7 +48,61 @@ git add .
 git commit -m "Add MRF Automation FINAL V2"
 git push origin main
 
+jodi thakay 
 
+git add MRF_Automation_FINAL_CC_MOD_MRF_EDIT_FLOW_FIXED_V2.py
+
+git commit -m "Add MRF Automation FINAL V2"
+git push origin main
+
+
+
+git ls-files
+
+dir -Recurse -Filter "MRF_Automation_FINAL_CC_MOD_MRF_EDIT_FLOW_FIXED_V2.py"
+
+
+
+
+PowerShell এ এই command দিন:
+
+cd C:\Users\islam.munjurul\Desktop\MRF-Automation
+
+তারপর:
+
+git remote -v
+
+Expected output হবে এরকম:
+
+origin  https://github.com/sumon1978/MRF-Automation.git (fetch)
+origin  https://github.com/sumon1978/MRF-Automation.git (push)
+
+যদি এটা আসে, তাহলে নতুন file push করার জন্য:
+
+git add .
+
+তারপর:
+
+git commit -m "Add MRF Automation FINAL CC MOD MRF EDIT FLOW V2"
+
+তারপর:
+
+git push origin main
+
+যদি git remote -v এ কিছু না আসে, তাহলে GitHub link connect করতে হবে:
+
+git remote add origin https://github.com/sumon1978/MRF-Automation.git
+
+তারপর:
+
+git branch -M main
+git push -u origin main
+
+এখন আগে শুধু এই command চালিয়ে result দিন:
+
+git remote -v
+
+তাহলে বুঝব আপনার PowerShell GitHub-এর সাথে ঠিকমতো connected কিনা।
 
 
 
