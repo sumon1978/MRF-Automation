@@ -91,6 +91,8 @@ git push origin main
 
 যদি git remote -v এ কিছু না আসে, তাহলে GitHub link connect করতে হবে:
 
+
+
 git remote add origin https://github.com/sumon1978/MRF-Automation.git
 
 তারপর:
@@ -194,3 +196,158 @@ MRF_Automation_FINAL_CC_MOD_MRF_EDIT_FLOW_FIXED_V2.py
 .py সহ দিতে হবে।
 
 
+
+আপনার MRF file কেন GitHub-এ আসছে না?
+
+আগে এই command দিয়ে দেখুন:
+
+
+git log --oneline --all --decorate -10
+
+এতে দেখা যাবে আপনার MRF file কোন commit-এ আছে কিনা।
+
+আর file tracking check:
+
+git ls-files | findstr MRF
+
+যদি কিছু না দেখায়, তাহলে file Git এ add হয়নি।
+
+এখন আগে এই দুইটা command চালান:
+
+git add .
+git commit -m "Update MRF Automation files"
+
+তারপর:
+
+git pull origin main --rebase
+
+যে output আসবে সেটি দিন।
+
+
+
+GitHub repository → Streamlit Cloud → Remote run (online app)
+
+মানে আপনার PC বন্ধ থাকলেও Streamlit app চলবে।
+
+ধাপগুলো:
+
+Step 1: নিশ্চিত করুন GitHub এ code push হয়েছে
+
+PowerShell:
+
+git status
+
+যদি দেখায়:
+
+Your branch is up to date with 'origin/main'
+nothing to commit, working tree clean
+
+তাহলে ঠিক আছে।
+
+Step 2: Streamlit Cloud এ যান
+
+এই link খুলুন:
+
+https://share.streamlit.io/
+
+তারপর:
+
+Sign in with GitHub
+
+দিয়ে আপনার GitHub account:
+
+sumon1978
+
+দিয়ে login করুন।
+
+Step 3: New App তৈরি করুন
+
+Dashboard এ:
+
+Create app
+
+ক্লিক করুন।
+
+Step 4: GitHub Repository select করুন
+
+এখানে:
+
+Repository:
+
+sumon1978/MRF-Automation
+
+Branch:
+
+main
+
+Select করুন।
+
+Step 5: Main file path দিন
+
+এখানে আপনার Python file দিতে হবে।
+
+যেমন:
+
+MRF_Automation_FINAL_CC_MOD_MRF_EDIT_FLOW_FIXED_V2.py
+
+খেয়াল রাখবেন:
+
+.py extension দিতে হবে
+নাম exact match হতে হবে
+Step 6: Deploy করুন
+
+Click:
+
+Deploy!
+
+Streamlit আপনার GitHub থেকে code download করবে এবং server-এ run করবে।
+
+Step 7: requirements.txt তৈরি করুন (অত্যন্ত গুরুত্বপূর্ণ)
+
+আপনার repository-তে এই file থাকা উচিত:
+
+requirements.txt
+
+ভিতরে:
+
+streamlit
+pandas
+openpyxl
+
+এটা না থাকলে Streamlit error দিতে পারে:
+
+ModuleNotFoundError
+
+PowerShell দিয়ে তৈরি করতে পারেন:
+
+cd C:\Users\islam.munjurul\Desktop\MRF-Automation
+
+echo streamlit > requirements.txt
+echo pandas >> requirements.txt
+echo openpyxl >> requirements.txt
+
+তারপর:
+
+git add .
+git commit -m "Add requirements for Streamlit deployment"
+git push origin main
+
+তারপর Streamlit Cloud আবার:
+
+Reboot app
+
+করবেন।
+
+Final structure GitHub এ এমন হওয়া উচিত:
+
+MRF-Automation
+│
+├── MRF_Automation_FINAL_CC_MOD_MRF_EDIT_FLOW_FIXED_V2.py
+├── requirements.txt
+└── README.md
+
+তারপর URL পাবেন:
+
+https://your-app-name.streamlit.app
+
+এটাই আপনার remote online MRF Automation app হবে।
