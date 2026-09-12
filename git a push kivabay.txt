@@ -123,6 +123,30 @@ git remote -v
 git remote add origin https://github.com/sumon1978/MRF-Automation.git
 ``
 
+git add .
+
+
+git commit -m "MRF_Automation_NCCD_final_V2"
+
+git branch -M main
+
+git push -u origin main
+
+git status
+
+
+তিনটার output এখানে paste করুন।
+
+এরপর আমি বলে দেব:
+
+file local folder-এ আছে কিনা
+git add হয়েছে কিনা
+commit হয়েছে কিনা
+GitHub-এ push হয়েছে কিনা
+exact কোন command চালাতে হবে
+
+
+
 
 
 
