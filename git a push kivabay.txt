@@ -148,6 +148,7 @@ exact কোন command চালাতে হবে
 
 
 
+Streamlit a setupda jonno ..................................................
 
 
 
@@ -355,3 +356,94 @@ Deploy!
 
 
 এটাই আপনার remote online MRF Automation app হবে।
+
+
+
+
+
+Step 1: GitHub Repository খুলুন
+
+Streamlit Cloud এ:
+
+Manage app
+
+এ যান।
+
+তারপর দেখুন কোন GitHub repo connected আছে।
+
+উদাহরণ:
+
+mrf-automation
+Step 2: GitHub এ file upload করুন
+
+আপনার repository তে যান।
+
+বর্তমান:
+
+mrf_automation_professional.py
+
+এর জায়গায় upload করুন:
+
+MRF_Automation_FINAL_CC_MOD_MRF_EDIT_FLOW_FIXED_V2.py
+Step 3: Streamlit main file change করুন
+
+Streamlit Cloud এ যান:
+
+https://share.streamlit.io
+
+তারপর:
+
+Your App
+ ↓
+Settings (⚙️)
+ ↓
+Main file path
+
+এখন আছে:
+
+mrf_automation_professional.py
+
+এটা পরিবর্তন করুন:
+
+MRF_Automation_FINAL_CC_MOD_MRF_EDIT_FLOW_FIXED_V2.py
+Step 4: Save করুন
+
+Click:
+
+Save
+
+তারপর:
+
+Reboot app
+Step 5: Wait করুন
+
+Streamlit নতুন file build করবে।
+
+শেষ হলে:
+
+Your app is live
+
+দেখাবে।
+
+যদি Settings এ Main file path পরিবর্তনের option না পান:
+
+তাহলে:
+
+Streamlit app delete করবেন না।
+GitHub repo-এর root folder এ রাখুন:
+mrf-automation
+│
+├── MRF_Automation_FINAL_CC_MOD_MRF_EDIT_FLOW_FIXED_V2.py
+├── requirements.txt
+
+তারপর Streamlit:
+
+Reboot app
+
+করুন।
+
+আরেকটি বিষয়: Streamlit Cloud-এ file name-এ space বা বড় নাম সমস্যা করে না, তবে main file path ঠিক exact হতে হবে:
+
+MRF_Automation_FINAL_CC_MOD_MRF_EDIT_FLOW_FIXED_V2.py
+
+.py সহ দিতে হবে।

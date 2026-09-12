@@ -8,6 +8,9 @@ import tempfile
 import io
 import zipfile
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+NCCD_DIR = os.path.join(BASE_DIR, 'NCCD')
+
 # ================= V8 UI THEME =================
 st.set_page_config(
     page_title="MRF Automation V8",
@@ -162,6 +165,8 @@ def project_dashboard():
     .l9 {background:linear-gradient(135deg,#f97316,#9a3412);}
     .tdd {background:linear-gradient(135deg,#dc2626,#7f1d1d);}
     .oth {background:linear-gradient(135deg,#334155,#020617);}
+    .nccd {background:linear-gradient(135deg,#64748b,#475569); color:#808080 !important;}
+    .nccd-text {color:#808080 !important;}
 
     </style>
     """, unsafe_allow_html=True)
@@ -1257,10 +1262,32 @@ if selected_project == "NCCD":
         text-align:center;
         font-size:28px;
         font-weight:800;">
-        📡 NCCD Project - MRF Generator
+        📡 <span class="nccd-text">NCCD</span> Project - MRF Generator
     </div>
     """, unsafe_allow_html=True)
     st.info("NCCD module using NCCD test(3).py logic - Material Match Fixed")
+    # ================= NCCD DEFAULT EXCEL DOWNLOADS =================
+    st.markdown("### 📥 Download Saved Default Files")
+    NCCD_DEFAULT_FILES = {
+        "MRF_Sample.xlsx": "NCCD/MRF_Sample(10).xlsx",
+        "from solution file.xlsx": "NCCD/from solution file_1(9).xlsx",
+        "Item code input.xlsx": "NCCD/Item code input(10).xlsx"
+    }
+
+    for name, path in NCCD_DEFAULT_FILES.items():
+        if os.path.exists(path):
+            with open(path, "rb") as f:
+                st.download_button(
+                    label="Download " + name,
+                    data=f.read(),
+                    file_name=name,
+                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    key="nccd_saved_default_" + name
+                )
+        else:
+            st.warning("Missing NCCD file: " + name)
+
+
 
     solution_file = st.file_uploader("Upload NCCD Solution File", type=["xlsx"], key="nccd_solution")
     item_file = st.file_uploader("Upload NCCD Item Code File", type=["xlsx"], key="nccd_item")
